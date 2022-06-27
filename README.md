@@ -1,8 +1,10 @@
 # alticci-sequence
 
-<h1> Deploy </h1>
+<h1> Sobre </h1>
 <p>Rode o projeto na porta padrão 8080.</p>
 <p>Deve ser utilizado com o projeto de front-end presente no repositório alticci-sequence-GUI</p>
+<p>Foram utilizados o spring boot para desenvolvimento bem como o spring cacheimg para gestão de cache</p>
+<p> Adicionalmente poderia ter sido utilizado o Redis através do docker para gestão de cache, ams para fins de treino o atual projeto já é o bastante</p>
 
 <h1> BackLog </h1>
 
