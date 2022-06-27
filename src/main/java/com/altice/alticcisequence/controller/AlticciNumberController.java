@@ -2,12 +2,13 @@ package com.altice.alticcisequence.controller;
 
 import com.altice.alticcisequence.model.AlticciNumber;
 import com.altice.alticcisequence.service.AlticciNumberSevice;
+import net.minidev.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/alticci")
@@ -21,10 +22,11 @@ private AlticciNumberSevice alticciNumberSevice ;
 
     }
 
-    @GetMapping(path = "/{n}")
-   public ResponseEntity getAlticciNumber(@PathVariable(name = "n") int alticiiNumber){
-        int mynumber = alticciNumberSevice.getNumber(alticiiNumber);
-            return new ResponseEntity<Integer>(mynumber, HttpStatus.OK);
-
+   @GetMapping(path = "/{n}")
+   @ResponseBody
+   @CrossOrigin(origins = "http://localhost:4200")
+   public ResponseEntity<JSONObject> getAlticciNumber(@PathVariable(name = "n") Integer inputValue){
+       AlticciNumber alticci = new AlticciNumber(alticciNumberSevice.generateAlticciResponse(inputValue)) ;
+            return new ResponseEntity(alticci, HttpStatus.OK);
     }
 }

@@ -1,18 +1,21 @@
 package com.altice.alticcisequence.model;
 
+
 public class AlticciNumber {
 
-    private int number;
+    private Integer AlticciNumberResult;
 
-    public AlticciNumber(int number) {
-        this.number = number;
+    public AlticciNumber(Integer alticciNumberResult) {
+        AlticciNumberResult = alticciNumberResult;
     }
 
     public long getNumber() {
-        return number;
+        return AlticciNumberResult;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.AlticciNumberResult = number;
     }
+
+
 }
