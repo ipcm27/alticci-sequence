@@ -1,2 +1,1 @@
-package com.altice.alticcisequence.config;public class swaggerconfig {
-}
+package com.altice.alticcisequence.config;
