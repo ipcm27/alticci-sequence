@@ -2,6 +2,7 @@
 
 <h1> Deploy </h1>
 <p>Rode o projeto na porta padrão 8080.</p>
+<p>Deve ser utilizado com o projeto de front-end presente no repositório alticci-sequence-GUI</p>
 
 <h1> BackLog </h1>
 
@@ -10,24 +11,28 @@ Opcionalmente poderá ser implementado um GUI web simples em JavaScript2 para co
 <br>
 <p>
 A sequência Alticci - a(n) - é definida da seguinte forma:
-n=0 => a(0) = 0
-n=1 => a(1) = 1
-n=2 => a(2) = 1
-n>2 => a(n) = a(n-3) + a(n-2)
+  <ul>
+<li>n=0 => a(0) = 0</li>
+<li>n=1 => a(1) = 1</li>
+<li>n=2 => a(2) = 1</li>
+<li>n>2 => a(n) = a(n-3) + a(n-2)</li>
+<ul>
 </p>  
   <p>
 Exemplo dos primeiros valores da sequência:
-0 = 0
-1 = 1 
-2 = 1
-3 = 1
-4 = 2
-5 = 2
-6 = 3
-7 = 4
-8 = 5
-9 = 7
-10 = 9 
+<ul>  
+<li>0 = 0</li>
+<li>1 = 1 </li>
+<li>2 = 1 </li>
+<li>3 = 1 </li>
+<li>4 = 2 </li>
+<li>5 = 2 </li>
+<li>6 = 3 </li>
+<li>7 = 4 </li>
+<li>8 = 5 </li>
+<li>9 = 7 </li>
+<li>10 = 9 </li>
+  </ul>
   
   </p>
   <p>
