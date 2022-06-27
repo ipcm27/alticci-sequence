@@ -25,7 +25,7 @@ private AlticciNumberSevice alticciNumberSevice ;
    @CrossOrigin(origins = "http://localhost:4200")
    @Cacheable("AlticciNumber")
    public ResponseEntity getAlticciNumber(@PathVariable(name = "n") Integer inputValue){
-       // System.out.println("cache do controller" + inputValue);
+       System.out.println("cache do controller " + inputValue);
        AlticciNumber alticci = new AlticciNumber(alticciNumberSevice.generateAlticciResponse(inputValue)) ;
             return new ResponseEntity(alticci, HttpStatus.OK);
     }
