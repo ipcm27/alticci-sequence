@@ -15,43 +15,45 @@ public class AlticciNumberSevice {
             return this.calculateAlticciBiggerThanTwo(numberInput);
         }
     }
-    @Cacheable("calculateAlticciIfLessEqualToTwo")
+    @Cacheable("AlticciNumber")
     public Integer calculateAlticciLessOrEqualToTwo(Integer numberInput) {
         if (numberInput < 2) {
             return numberInput;
         } else if (numberInput == 2) {
             return 1;
         } else {
-            return 0;
+            return numberInput;
         }
     }
 
+
+
+@Cacheable("AlticciNumber")
     public Integer calculateAlticciBiggerThanTwo(Integer numberInput) {
-        int res1 = numberInput - 3;
-        int res2 = numberInput - 2;
-        int product = this.calcSum(res1, res2);
 
-        if (res1 > 2) {
-            while (res1 > 2) {
-                res1 = this.calculateAlticciBiggerThanTwo(res1);
+        int param1 = numberInput - 3;
+        int param2 = numberInput - 2;
+
+        boolean isParamGood = false;
+
+
+        while(!isParamGood) {
+
+        param1 = this.calculateAlticciLessOrEqualToTwo(param1);
+
+            while (param1 > 2) {
+                System.out.println("entrei 1");
+                param1 = this.calculateAlticciBiggerThanTwo(param1);
             }
-        } else {
-            res1 = this.calculateAlticciLessOrEqualToTwo(res1);
-        }
 
-        if (res2 > 2) {
-            while (res2 > 2) {
-                res2 = this.calculateAlticciBiggerThanTwo(res2);
+        param2 = this.calculateAlticciLessOrEqualToTwo(param2);
+            while (param2 > 2) {
+                System.out.println("entrei 2");
+                param2 = this.calculateAlticciBiggerThanTwo(param2);
             }
-        } else {
-            res2 = this.calculateAlticciLessOrEqualToTwo(res2);
-        }
-        product = this.calcSum(res1, res2);
-
-        return product;
+        isParamGood= true;
+}
+        return param1 + param2;
     }
 
-    public int calcSum(Integer res1, Integer res2) {
-        return res1 + res2;
-    }
 }
