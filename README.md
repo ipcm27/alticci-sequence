@@ -1,9 +1,9 @@
 # alticci-sequence
 
-#Deploy#
-Rode o projeto na porta padrão 8080.
+<h1> Deploy </h1>
+<p>Rode o projeto na porta padrão 8080.</p>
 
-#BackLog#
+<h1> BackLog </h1>
 
 Deverá ser implementado um serviço REST utilizando uma framework JAVA1 que devolve um valor da sequência Alticci.
 Opcionalmente poderá ser implementado um GUI web simples em JavaScript2 para consultar o serviço.
